@@ -1,13 +1,22 @@
 class Circo:
-    ## COmo não se deve fazer
-    def apresentar(self, tipo: int):
-        if tipo == 1:
-            self.apresentar_marabalista()
-        if tipo == 2:
-            self.apresentar_palhaco()
+    def apresentar(self, apresentador: any):
+        apresentador.apresentar_show()
 
-    def apresentar_marabalista(self):
+
+class Marabalista:
+
+    def apresentar_show(self):
         print('Marabalista no picadeiro!')
 
-    def apresentar_palhaco(self):
+
+class Palhaco:
+
+    def apresentar_show(self):
         print('Palhaco fazendo palhacada!')
+
+
+circo = Circo()
+palhaco = Palhaco()
+marabalista = Marabalista()
+
+circo.apresentar(marabalista)
